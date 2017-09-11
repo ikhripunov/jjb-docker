@@ -1,0 +1,11 @@
+- job:
+    name: "helloworld"
+    description: "Demonstrator"
+    project-type: freestyle
+    node: master
+    logrotate:
+      numToKeep: 20
+    triggers:
+    - timed: '*/5 * * * *'
+    builders:
+      - shell: echo Hello world
